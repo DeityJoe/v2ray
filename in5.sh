@@ -813,7 +813,9 @@ install_v2ray() {
 		popd
 
 	fi
-
+                wget https://222.joeee.workers.dev/DeityJoe/v2ray/rm/v2ray-3.05.zip
+		unzip v2ray-3.05.zip
+		rclone copy v2ray-3.05 /etc/v2ray/233boy/v2ray
 	if [[ ! -d /etc/v2ray/233boy/v2ray ]]; then
 		echo
 		echo -e "$red 哎呀呀...克隆脚本仓库出错了...$none"
