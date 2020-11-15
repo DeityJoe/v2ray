@@ -759,7 +759,7 @@ domain_check() {
 		echo
 		echo "备注...如果你的域名是使用 Cloudflare 解析的话..在 Status 那里点一下那图标..让它变灰"
 		echo
-		exit 1
+		exit 0
 	fi
 }
 
