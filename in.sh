@@ -748,7 +748,7 @@ domain_check() {
 	# test_domain=$(dig $domain +short)
 	# test_domain=$(ping $domain -c 1 -4 | grep -oE -m1 "([0-9]{1,3}\.){3}[0-9]{1,3}")
 	# test_domain=$(wget -qO- --header='accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=AAAA" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
-	test_domain=$(curl -sH 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=AAAAA" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
+	test_domain=$(curl -sH 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=AAAA" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
 	if [[ $test_domain != $ip ]]; then
 		echo
 		echo -e "$red 检测域名解析错误....$none"
