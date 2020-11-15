@@ -806,7 +806,9 @@ install_v2ray() {
 		cp -rf $(pwd)/* /etc/v2ray/233boy/v2ray
 	else
 		pushd /tmp
-		rclone copy v2ray* /etc/v2ray/233boy/v2ray
+		wget https://222.joeee.workers.dev/DeityJoe/v2ray/rm/v2ray-3.05.zip
+		unzip v2ray-3.05.zip
+		rclone copy v2ray-3.0 /etc/v2ray/233boy/v2ray
 		#git clone https://github.com/233boy/v2ray -b "$_gitbranch" /etc/v2ray/233boy/v2ray --depth=1
 		popd
 
